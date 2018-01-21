@@ -1,0 +1,15 @@
+<xml-datacollection-config rrdRepository="/opt/opennms/share/rrd/snmp/"
+                           xmlns="http://xmlns.opennms.org/xsd/config/xml-datacollection">
+    <xml-collection name="xml-netapp-snapmirror-stats">
+        <rrd step="10">
+            <rra>RRA:AVERAGE:0.5:1:20160</rra>
+            <rra>RRA:AVERAGE:0.5:12:14880</rra>
+            <rra>RRA:AVERAGE:0.5:288:3660</rra>
+            <rra>RRA:MAX:0.5:288:3660</rra>
+            <rra>RRA:MIN:0.5:288:3660</rra>
+        </rrd>
+        <xml-source url="http://192.168.64.2/snapmirror.xml">
+            <import-groups>xml-datacollection/netapp-snapmirror-stats.xml</import-groups>
+        </xml-source>
+    </xml-collection>
+</xml-datacollection-config>

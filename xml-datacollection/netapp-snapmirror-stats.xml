@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-groups>
+    <xml-group name="netapp-snapmirror-xml" resource-type="NetAppSnapMirrorXML"
+               resource-xpath="/netapp/results/attributes-list/snapmirror-info" key-xpath="relationship-id">
+        <xml-object name="SrcLoc" type="string" xpath="source-location"/>
+        <xml-object name="DstLoc" type="string" xpath="destination-location"/>
+        <xml-object name="isHealthy" type="STRING" xpath="is-healthy"/>
+        <xml-object name="LagTime" type="GAUGE" xpath="lag-time"/>
+        <xml-object name="LastDurat" type="GAUGE" xpath="last-transfer-duration"/>
+        <xml-object name="LastTransSz" type="GAUGE" xpath="last-transfer-size"/>
+    </xml-group>
+</xml-groups>

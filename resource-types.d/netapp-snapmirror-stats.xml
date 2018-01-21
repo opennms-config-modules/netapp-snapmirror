@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datacollection-group name="NetApp SnapMirror">
+    <resourceType name="NetAppSnapMirrorXML" label="NetAppSnapMirror" resourceLabel="${SrcLoc}->${DstLoc}">
+        <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+        <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+    </resourceType>
+</datacollection-group>
