@@ -1,0 +1,28 @@
+= Netapp Snap Mirror
+
+OpenNMS configuration for Netapp Snap Mirror devices.
+
+== Installation
+
+.Download and install from GitHub
+[source, bash]
+----
+mkdir ${HOME}/opennms-config-workspace
+cd ${HOME}/opennms-config-workspace
+git clone https://github.com/opennms-config-modules/netapp-snapmirror.git
+----
+
+=== Data Collection
+
+.Install datacollection configuration
+[source, bash]
+----
+cp ${HOME}/opennms-config-workspace/netapp-snapmirror/resource-types.d/*.xml ${OPENNMS_HOME}/etc/resource-types.d
+cp ${HOME}/opennms-config-workspace/netapp-snapmirror/xml-datacollection/*.xml ${OPENNMS_HOME}/etc/xml-datacollection
+----
+
+.Include in xml-datacollection-config.xml, see example file in the repository
+[source, xml]
+----
+<import-groups>xml-datacollection/netapp-snapmirror-stats.xml</import-groups>
+----
